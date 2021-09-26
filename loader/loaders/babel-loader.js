@@ -7,6 +7,7 @@ function loader(source) {
     babel.transform(source, {
         ...options,
         sourceMap: true,
+        // source map的文件名
         filename: this.resourcePath.split('/').pop()
     }, (err, result) => {
         cb(err, result.code, result.map)
